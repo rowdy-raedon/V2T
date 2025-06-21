@@ -1,0 +1,4 @@
+PyQt5==5.15.10
+SpeechRecognition==3.10.1
+PyAudio==0.2.14
+pyperclip==1.8.2 
