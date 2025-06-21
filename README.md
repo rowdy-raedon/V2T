@@ -41,15 +41,35 @@ Here are the specific fixes I implemented in the code to improve stability and c
 
 ### How to Run the Application
 
-1.  **Install Dependencies:**
+**Important: Use a Virtual Environment**
+
+To avoid conflicts with system packages, it's essential to run this application in a virtual environment.
+
+1.  **Create and Activate the Virtual Environment:**
+    ```bash
+    # Create the environment (only needs to be done once)
+    python3 -m venv venv
+
+    # Activate the environment (do this every time you work on the project)
+    source venv/bin/activate
+    ```
+
+2.  **Install Dependencies:**
+    Once your virtual environment is active, install the required packages:
     ```bash
     pip install -r requirements.txt
     ```
-    *(Note: `PyAudio` can sometimes be tricky. If you have issues, you might need to install it using a wheel file specific to your Python version and system architecture.)*
+    *(Note: `PyAudio` can sometimes be tricky. If you have issues, you might need to install system-level libraries first, like `sudo apt-get install portaudio19-dev` on Debian/Ubuntu systems.)*
 
-2.  **Run the App:**
+3.  **Run the App:**
     ```bash
     python speech_to_text_app.py
+    ```
+
+4.  **Deactivating:**
+    When you're finished, you can leave the virtual environment by simply running:
+    ```bash
+    deactivate
     ```
 
 The application should now be stable, robust, and free of the identified bugs. Let me know if you have any other questions!
